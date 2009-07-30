@@ -6,6 +6,8 @@
 	<array>
 		<string>proto</string>
 	</array>
+	<key>keyEquivalent</key>
+	<string>^~P</string>
 	<key>name</key>
 	<string>Protocol Buffers</string>
 	<key>patterns</key>
@@ -61,6 +63,38 @@
 			</dict>
 			<key>match</key>
 			<string>\b([a-zA-Z0-9_\.]*?)\(</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.proto</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block.proto</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>//</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.proto</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>$\n?</string>
+			<key>name</key>
+			<string>comment.line.double-slash.proto</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
